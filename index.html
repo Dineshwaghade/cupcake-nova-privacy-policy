@@ -144,14 +144,16 @@
 
 <div class="page">
 
-<p class="updated">Last updated: 3 October 2026</p>
+<p class="updated">Last updated: 27 October 2026</p>
 
 <p>
   Cupcake Nova 2048 is a game by Waghade Studio. It has no accounts and no
   sign-in, and it never asks who you are. Your scores and your game in progress
-  are stored on your own phone and are not sent anywhere. The only data that
-  leaves your device is what Google's advertising service collects in order to
-  show ads, and you are asked about that separately.
+  are stored on your own phone and are not sent anywhere. Two things do leave
+  your device, both of them Google services and neither of them tied to your
+  name: what Google's advertising service collects in order to show ads, and
+  anonymous figures about how the game is used and when it crashes. You are
+  asked about both on the same consent form.
 </p>
 
 <h2>What the game stores on your phone</h2>
@@ -203,6 +205,52 @@
   information.
 </p>
 
+<h2>Usage analytics and crash reports</h2>
+<p>
+  The game uses Google Analytics for Firebase to count how it is being used, and
+  Firebase Crashlytics to learn why it failed when it does. This is how we know
+  whether players come back, which parts of the game people reach, whether an
+  update made things better or worse, and what to fix. It reports:
+</p>
+<ul>
+  <li>
+    A random identifier Google gives this installation of the app. It is not
+    your advertising ID, it is not linked to any account, and it changes if you
+    reinstall the game.
+  </li>
+  <li>
+    Your device model, operating system version, language, country and the
+    version of the game you are running.
+  </li>
+  <li>
+    An approximate location &mdash; country or region &mdash; worked out from
+    your IP address. Never your precise location.
+  </li>
+  <li>
+    Events the app reports as they happen, such as opening the game, how long a
+    session lasted, which screens you reached, and the revenue an ad earned.
+  </li>
+  <li>
+    When the game crashes: what it was doing at the time and the state of your
+    device &mdash; its model, operating system version, free memory and
+    orientation &mdash; together with the same random identifier as above.
+  </li>
+</ul>
+<p>
+  None of it carries your name, your email address or any account, because the
+  game has none of those to send. Usage figures are totals and averages across
+  everyone playing. A crash report describes one failure, never who it happened
+  to.
+</p>
+<p>
+  Analytics and crash reports are switched off for anyone who declines on
+  Google's consent form, and you can switch them off later at any time by
+  withdrawing your consent from
+  <em>Settings &rarr; Ad privacy options</em> inside the game. Because the
+  consent form appears a few seconds after the game opens, a small amount may be
+  collected on your very first launch before your answer is known.
+</p>
+
 <h2>Your choices about ads</h2>
 <ul>
   <li>
@@ -233,10 +281,12 @@
     for us to store, secure or delete.
   </li>
   <li>
-    The information Google collects for advertising is sent from your phone to
-    Google over an encrypted connection (TLS). Google keeps and deletes it under
-    its own privacy policy:
+    The information Google collects for advertising and for usage analytics is
+    sent from your phone to Google over an encrypted connection (TLS). Google
+    keeps and deletes it under its own privacy policy:
     <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+    Analytics data is held for the retention period set on the Firebase project,
+    after which Google deletes it.
   </li>
 </ul>
 
